@@ -14,13 +14,18 @@ public class BookImplementation implements BookService{
 
     private final BookRepo bookRepo;
 
-    private BookImplementation(BookRepo bookRepo){
+    public BookImplementation(BookRepo bookRepo){
         this.bookRepo = bookRepo;
     }
 
     private List<Book> getAllBooks(){
         return bookRepo.findAll();
     }
+
+    public Book createBook(Book book){
+        return bookRepo.save(book);
+    }
+
 
 
 
