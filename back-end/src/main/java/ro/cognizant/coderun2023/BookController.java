@@ -14,10 +14,12 @@ public class BookController {
         this.bookService = bookService;
     }
     
-    @PostMapping("/users")
+    @PostMapping("/books")
     public ResponseEntity<Book> createBook(@RequestBody Book book){
         Book newBook = bookService.createBook(book);
         return ResponseEntity.status(HttpStatus.CREATED).body(newBook);
     }
+
+
     
 }

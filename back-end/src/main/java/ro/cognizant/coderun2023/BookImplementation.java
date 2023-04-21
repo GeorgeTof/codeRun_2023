@@ -18,7 +18,7 @@ public class BookImplementation implements BookService{
         this.bookRepo = bookRepo;
     }
 
-    private List<Book> getAllBooks(){
+    public List<Book> getAllBooks(){
         return bookRepo.findAll();
     }
 
